@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "nyc ts-mocha **/*.spec.ts -t 5000 --exit"
+    "test": "nyc ts-mocha **/*.spec.js -t 5000 --exit"
   },
   "author": "",
   "license": "ISC",
