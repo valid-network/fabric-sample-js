@@ -1,10 +1,12 @@
-let fabricContractApi = require('fabric-contract-api')
+// let fabricContractApi = require('fabric-contract-api')
+const { Contract } = require ('fabric-contract-api');
+
 // tslint:disable-next-line:no-empty-interface
-class ReceivableGoodsContainer extends fabricContractApi.Contract {
+class ReceivableGoodsContainer extends Contract {
 }
 
 // tslint:disable-next-line:no-empty-interface
-class Warehouse {
+class Warehouse extends Contract {
     async randomTrade(ctx) {
         let a = Math.random();
         let b = 3;
@@ -19,7 +21,7 @@ class RegionalWarehouse extends Warehouse {
     }
 }
 // tslint:disable-next-line:no-empty-interface
-class Trackable {
+class Trackable extends Contract{
 
     async addReceivable(ctx) {
         await ctx.stub.putState('key', Buffer.from('value'));
@@ -52,7 +54,7 @@ class LocalPort extends Port {
 class GlobalPort extends Port {
 }
 
-class ChinaTrade {
+class ChinaTrade extends Contract{
 
     async initLedger(ctx) {
     }
