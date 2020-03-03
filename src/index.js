@@ -5,5 +5,5 @@
 let ChinaTradeContracts = require('./chinaTrade');
 
 module.exports = {
-    contracts: [ChinaTradeContracts.ChinaTrade],    
+    ChinaTrade: ChinaTradeContracts.ChinaTrade,    
 }
